@@ -15,6 +15,10 @@ def myRandom():
 def index():
   bottle.response.content_type = 'text/html'
   return bottle.static_file('index.html','.')
+  
+@APP.route('/greet/<salutation>/<name>')
+def greet(name):
+  return 'Hello %s %s' % (salutaion, name)
 
 if __name__ == '__main__':
   bottle.run(application=APP)
