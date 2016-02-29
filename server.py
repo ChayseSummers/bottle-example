@@ -10,6 +10,11 @@ def index():
 @APP.route('/myRandom')
 def myRandom():
   return '<p>Random page!</p>'
+  
+@APP.route('/index')
+def index():
+  bottle.response.content_type = 'text/html'
+  return bottle.static_file('index.html','.')
 
 if __name__ == '__main__':
   bottle.run(application=APP)
