@@ -1,5 +1,5 @@
 import bottle
-import random
+from random import *
 
 APP = bottle.default_app()
 
@@ -7,7 +7,7 @@ APP = bottle.default_app()
 def index():
   return '<p>Hello</p>'
   
-@APP.route('/random')
+@APP.route('/myRandom')
 def myRandom():
   return random.randint(0,100)
 
