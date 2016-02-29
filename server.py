@@ -18,7 +18,7 @@ def index():
   
 @APP.route('/greet/<salutation>/<name>')
 def greet(salutation, name):
-  return 'Hello %s %s' % (salutaion, name)
+  return 'Hello %s %s' % (salutation, name)
 
 if __name__ == '__main__':
   bottle.run(application=APP)
