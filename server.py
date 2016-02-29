@@ -1,5 +1,5 @@
 import bottle
-from random import *
+import random
 
 APP = bottle.default_app()
 
@@ -9,7 +9,7 @@ def index():
   
 @APP.route('/myRandom')
 def myRandom():
-  return random.randint(0,100)
+  return '<p>Random page!</p>'
 
 if __name__ == '__main__':
   bottle.run(application=APP)
